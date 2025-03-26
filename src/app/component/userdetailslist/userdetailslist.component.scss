@@ -1,0 +1,43 @@
+// table {
+//     width: 100%;
+//   }
+  
+//   .mat-mdc-form-field {
+//     font-size: 14px;
+//     width: 100%;
+//   }
+  
+//   td, th {
+//     width: 25%;
+//   }
+  
+
+//   .table-header{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: nowrap;
+//     margin-bottom: 15px;
+//     padding: 0 10px;
+
+//   }
+  .table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Adds spacing between elements */
+    padding: 10px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px; /* Ensures spacing between buttons */
+  }
+  
+  /* Optional: Ensure mat-form-field width is proper */
+  mat-form-field {
+    min-width: 200px;
+    flex-grow: 1;
+  }
+  

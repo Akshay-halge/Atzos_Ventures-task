@@ -1,0 +1,37 @@
+<form [formGroup]="userDetailsForm" (ngSubmit)="OnSubmit()" [ngClass]="{'view-mode':'isviewMode'}">
+    <h2 mat-dialog-title class="dialog-title">  {{ isViewMode ? 'User Details' : (isEditMode ? 'Update User Information' : 'Create New User') }}
+    </h2>
+    <div mat-dialog-content class="dialog-content">
+        <div class="form-container">
+            <mat-form-field appearance="outline">
+                <mat-label>createdAt</mat-label>
+                <input matInput formControlName = 'createdAt' name="createdAt" required>
+                <mat-error>createdAt filed is required</mat-error>
+            </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName ='name' name="name" required>
+                <mat-error>Name filed is required</mat-error>
+              </mat-form-field > 
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName ='email' name="email" required>
+                <mat-error>Email filed is required</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Mobile</mat-label>
+                <input matInput type="tel" formControlName ='mobile' name="mobile" min='10' required>
+                <mat-error>Mobile filed is required</mat-error>
+              </mat-form-field> 
+              <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput formControlName = 'address' name="address" required>
+                <mat-error>Address filed is required</mat-error>
+              </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button *ngIf="!isViewMode" type="submit" color="primary" [mat-dialog-close]="true" cdkFocusInitial>Submit</button>
+    </div>
+</form>

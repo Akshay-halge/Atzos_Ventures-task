@@ -1,0 +1,30 @@
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th>Original List</th>
+        <th>Sorted List</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul>
+            <li *ngFor="let user of usersName | sortPipe: 'name'">{{ user.name }}</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li *ngFor="let user of usersName | ascDscOrder: 'name' : sortOrder">
+              {{ user.name }}
+            </li>
+          </ul>
+        </td>
+        <td class="button-container">
+          <button mat-raised-button color="primary" (click)="toggleSortOrder()">Toggle Sort Order</button>
+          <button mat-raised-button color="accent" routerLink="/userdetails">Back</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
