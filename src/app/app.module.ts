@@ -17,7 +17,6 @@ import { DialogComponent } from './component/dialog/dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NromalComponent } from './component/nromal/nromal.component';
 import { SortPipePipe } from './pipes/sort-pipe.pipe';
 import { AscDscOrderPipe } from './pipes/asc-dsc-order.pipe';
 import { SortDataComponent } from './component/sort-data/sort-data.component';
@@ -29,7 +28,6 @@ import { SortDataComponent } from './component/sort-data/sort-data.component';
     AppComponent,
     UserdetailslistComponent,
     DialogComponent,
-    NromalComponent,
     SortPipePipe,
     AscDscOrderPipe,
     SortDataComponent

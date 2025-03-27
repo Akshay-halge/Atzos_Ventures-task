@@ -12,7 +12,7 @@ export class AscDscOrderPipe implements PipeTransform {
       let fieldA = a[field]?.toString().toLowerCase() || '';
       let fieldB = b[field]?.toString().toLowerCase() || '';
 
-      // Extract numeric values from strings (if present)
+      // Extract numeric values from strings
       let numA = fieldA.match(/\d+/g);
       let numB = fieldB.match(/\d+/g);
 
